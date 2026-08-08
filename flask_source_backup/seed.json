@@ -1,0 +1,176 @@
+{
+  "settings": {
+    "site_title": "IMSA — Manajemen Informatika",
+    "hero_title": "Inside IMSA.",
+    "hero_subtitle": "Himpunan Mahasiswa Jurusan Manajemen Informatika Politeknik Negeri Fakfak • Periode 2026/2027",
+    "hero_description": "Ruang informasi IMSA untuk mengenal struktur kepengurusan, empat divisi utama, anggota, arah kerja organisasi, serta dokumentasi kegiatan dalam satu pengalaman digital.",
+    "hero_background": "",
+    "hero_caption": "Jurusan Manajemen Informatika • Politeknik Negeri Fakfak",
+    "period": "2026/2027",
+    "sk_number": "2432/PL35/KM/2026",
+    "sk_date": "04 Mei 2026",
+    "sk_validity": "07 Januari 2026 – 31 Oktober 2026",
+    "footer_text": "IMSA • Politeknik Negeri Fakfak"
+  },
+  "leadership": [
+    [
+      "Penanggung Jawab",
+      "Riyadh Arridha, S.Kom., M.T.",
+      "Memberikan arah kelembagaan dan memastikan kegiatan organisasi selaras dengan kebijakan institusi."
+    ],
+    [
+      "Pembina",
+      "Nur Sakinah, S.ST., M.Tr.Kom",
+      "Mendampingi, membina, dan memberikan penguatan dalam pelaksanaan program organisasi."
+    ],
+    [
+      "Ketua",
+      "Kevin Ananda Putra Talla",
+      "Memimpin organisasi dan mengoordinasikan seluruh program serta divisi."
+    ],
+    [
+      "Wakil Ketua 1",
+      "Cindy Arrina Aulia",
+      "Mendukung ketua dan membantu koordinasi pelaksanaan program."
+    ],
+    [
+      "Wakil Ketua 2",
+      "Ramanda Irman Pratama",
+      "Membantu pengawasan program dan komunikasi lintas divisi."
+    ],
+    [
+      "Sekretaris 1",
+      "Shafira La Yamin",
+      "Mengelola administrasi utama, surat-menyurat, dan dokumen organisasi."
+    ],
+    [
+      "Sekretaris 2",
+      "Firda Fatika Sari",
+      "Mendukung pengarsipan dan kelengkapan administrasi kegiatan."
+    ],
+    [
+      "Bendahara",
+      "Fitri Ani Astuti",
+      "Mengelola pencatatan keuangan dan laporan pertanggungjawaban."
+    ]
+  ],
+  "divisions": [
+    {
+      "slug": "sosmas",
+      "name": "Sosial Masyarakat",
+      "coordinator": "La Ode Hirlan Firmansyah",
+      "summary": "Menjadi penghubung IMSA dengan mahasiswa dan lingkungan sosial melalui kepedulian, pengabdian, solidaritas, dan respons terhadap kebutuhan sosial.",
+      "tasks": [
+        "Mengidentifikasi kebutuhan sosial dan aspirasi mahasiswa.",
+        "Merancang kegiatan pengabdian, bakti sosial, dan aksi kepedulian.",
+        "Membangun partisipasi anggota dan relasi dengan pihak eksternal.",
+        "Mencatat hasil kegiatan untuk evaluasi dan pertanggungjawaban."
+      ],
+      "outputs": [
+        "Bakti sosial",
+        "Aksi kepedulian",
+        "Pengabdian",
+        "Relasi sosial"
+      ],
+      "principle": "Responsif, peduli, inklusif, dan dekat dengan mahasiswa.",
+      "members": [
+        "Maria Meirita Nasa",
+        "Nur Aini Maswain",
+        "Wasella Dartin",
+        "Rosita",
+        "Randi Saputra",
+        "Sarwan Kalean",
+        "Apryan Sumah",
+        "Nurlaila Tukwain",
+        "Dwi Andriani La Saole",
+        "Abdul Fahmi Siamira",
+        "Sumi Ati"
+      ]
+    },
+    {
+      "slug": "kominfo",
+      "name": "Kominfo",
+      "coordinator": "Sauda Sanaky",
+      "summary": "Mengelola informasi, publikasi, dokumentasi, arsip digital, dan citra visual IMSA agar komunikasi organisasi tersampaikan secara cepat, akurat, dan menarik.",
+      "tasks": [
+        "Menyusun kalender publikasi dan identitas visual.",
+        "Membuat poster, caption, pengumuman, dan konten media sosial.",
+        "Mendokumentasikan kegiatan dalam bentuk foto dan video.",
+        "Menjaga konsistensi informasi serta keteraturan arsip digital."
+      ],
+      "outputs": [
+        "Publikasi",
+        "Dokumentasi",
+        "Media sosial",
+        "Arsip digital"
+      ],
+      "principle": "Cepat, rapi, informatif, kreatif, dan konsisten secara visual.",
+      "members": [
+        "Ani Rahmawati Rumaf",
+        "Androw Eka Rachmad",
+        "Sahnun Jusri",
+        "Emil Intopiana",
+        "Armila Rumalutur"
+      ]
+    },
+    {
+      "slug": "kaderisasi",
+      "name": "Kaderisasi",
+      "coordinator": "Syavinatul Isya",
+      "summary": "Berfokus pada pembinaan, penguatan karakter organisasi, kedisiplinan, dan keberlanjutan kepengurusan melalui kader yang aktif dan siap mengambil peran.",
+      "tasks": [
+        "Merancang orientasi, mentoring, dan pelatihan dasar organisasi.",
+        "Membangun tanggung jawab, loyalitas, disiplin, dan etika organisasi.",
+        "Mengidentifikasi potensi anggota untuk regenerasi kepengurusan.",
+        "Mengevaluasi perkembangan kader dan tindak lanjut pembinaan."
+      ],
+      "outputs": [
+        "Orientasi",
+        "Mentoring",
+        "Pelatihan dasar",
+        "Regenerasi"
+      ],
+      "principle": "Terarah, disiplin, konsisten, dan berkelanjutan.",
+      "members": [
+        "Elvareta Yoseph",
+        "Tessa Nika Astria",
+        "Putri Riantika",
+        "Laras Nalendra Sari",
+        "Yunus Ansal Biarpruga",
+        "Moh Ansar Rumasukun",
+        "Muhammad Faisal Tahir"
+      ]
+    },
+    {
+      "slug": "skill",
+      "name": "Keprofesian & Skill",
+      "coordinator": "Yolanda Lia Sri",
+      "summary": "Mendorong peningkatan kompetensi akademik, teknologi, soft skill, hard skill, kesiapan karier, dan portofolio mahasiswa Manajemen Informatika.",
+      "tasks": [
+        "Menyusun workshop, kelas keterampilan, dan pelatihan teknologi.",
+        "Mendorong mahasiswa mengikuti kompetisi, proyek, dan sertifikasi.",
+        "Menghubungkan minat mahasiswa dengan kebutuhan dunia kerja.",
+        "Mengevaluasi manfaat kegiatan melalui hasil karya dan kompetensi."
+      ],
+      "outputs": [
+        "Workshop",
+        "Kelas skill",
+        "Portofolio",
+        "Prestasi"
+      ],
+      "principle": "Praktis, aplikatif, kolaboratif, dan berorientasi kompetensi.",
+      "members": [
+        "Muhammad Isman Wairo’y",
+        "Bella Aldama Hamsah",
+        "Auliya Nur Asma",
+        "Arwan Rumakamar",
+        "Said Umar Almahdaly",
+        "Fifi Rofalita",
+        "Nur Zhalsabila Putri Mirzal",
+        "Icus Atnic Itajes",
+        "Asrin Kaisan",
+        "Dominika Lasol"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% block title %}IMSA — Dashboard{% endblock %}
+{% block body %}
+<header class="topbar">
+  <a class="brand" href="#home">
+    <img src="{{ url_for('static',filename='img/logo-imsa.png') }}" alt="Logo IMSA">
+    <span><b>IMSA</b><small>Politeknik Negeri Fakfak</small></span>
+  </a>
+  <nav>
+    <a href="#profile">Profil</a>
+    <a href="#leadership">Pengurus</a>
+    <a href="#divisions">Divisi</a>
+    <a href="#activities">Kegiatan</a>
+  </nav>
+  <a class="admin-mini" href="{{ url_for('admin_login') }}">Admin</a>
+</header>
+
+<main>
+  <section class="hero" id="home" {% if settings.hero_background %}style="--hero-image:url('{{ upload_url(settings.hero_background) }}')"{% endif %}>
+    <div class="hero-bg"></div>
+    <div class="hero-shade"></div>
+
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">IMSA • {{ settings.period }}</span>
+        <h1>{{ settings.hero_title }}</h1>
+        <p class="hero-sub">{{ settings.hero_subtitle }}</p>
+        <p class="hero-desc">{{ settings.hero_description }}</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="{{ url_for('presentation') }}">Mulai Presentasi <span>▶</span></a>
+          <button class="btn glass android-trigger" data-url="{{ public_base_url() }}/?device=android">Akses Android / QR <span>▦</span></button>
+        </div>
+      </div>
+
+      <div class="hero-logo reveal">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <img src="{{ url_for('static',filename='img/logo-imsa.png') }}" alt="Logo IMSA">
+        <small>Informatics Management Students Association</small>
+      </div>
+    </div>
+
+    <div class="mode-cards reveal">
+      <a class="mode-card" href="{{ url_for('presentation') }}">
+        <span>01</span>
+        <b>Presentasi Organisasi</b>
+        <p>Tampilan terstruktur untuk memperkenalkan IMSA dalam forum, rapat, maupun kegiatan resmi.</p>
+        <i>↗</i>
+      </a>
+      <button class="mode-card android-trigger" data-url="{{ public_base_url() }}/?device=android">
+        <span>02</span>
+        <b>Akses Mobile</b>
+        <p>Buka dashboard IMSA melalui QR dengan tampilan yang responsif dan nyaman di perangkat Android.</p>
+        <i>▦</i>
+      </button>
+      <a class="mode-card" href="#activities">
+        <span>03</span>
+        <b>Dokumentasi Kegiatan</b>
+        <p>Jelajahi rekam kegiatan, kontribusi, dan aktivitas organisasi dalam satu galeri terintegrasi.</p>
+        <i>↓</i>
+      </a>
+    </div>
+
+    <small class="hero-caption">{{ settings.hero_caption }}</small>
+  </section>
+
+  <section class="section" id="profile">
+    <div class="section-head reveal">
+      <div>
+        <span>01 • PROFILE</span>
+        <h2>Mengenal IMSA<br><em>lebih dekat.</em></h2>
+      </div>
+      <p>IMSA menjadi wadah pengembangan mahasiswa Manajemen Informatika melalui kepemimpinan, kolaborasi, kepedulian sosial, komunikasi, kaderisasi, serta peningkatan kompetensi profesional.</p>
+    </div>
+
+    <div class="profile-bento">
+      <article class="panel manifesto reveal">
+        <div class="watermark">IMSA</div>
+        <small>ORGANIZATION</small>
+        <h3>Satu organisasi, banyak peran, satu arah gerak.</h3>
+        <p>Setiap unsur kepengurusan memiliki fungsi yang saling melengkapi. Pengurus harian menjaga arah organisasi, sementara setiap divisi menerjemahkan tujuan tersebut menjadi kegiatan yang relevan, terukur, dan memberi manfaat bagi mahasiswa.</p>
+      </article>
+
+      <article class="panel stats reveal">
+        <div><b>{{ divisions|length }}</b><span>Divisi Utama</span></div>
+        <div><b>{{ leadership|length }}</b><span>Struktur Inti</span></div>
+        <div><b>{{ activities|length }}</b><span>Kegiatan Terdokumentasi</span></div>
+        <div><b>{{ settings.period }}</b><span>Periode Kepengurusan</span></div>
+      </article>
+
+      <article class="red-panel reveal">
+        <span>DASAR PENGESAHAN</span>
+        <h3>{{ settings.sk_number }}</h3>
+        <p>{{ settings.sk_date }} • {{ settings.sk_validity }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="leadership">
+    <div class="section-head reveal">
+      <div>
+        <span>02 • CORE LEADERSHIP</span>
+        <h2>Arah kepemimpinan<br><em>yang terstruktur.</em></h2>
+      </div>
+      <p>Pengurus inti mengawal koordinasi, administrasi, komunikasi, pengambilan keputusan, dan akuntabilitas organisasi agar setiap program berjalan selaras dengan tujuan IMSA.</p>
+    </div>
+
+    <div class="lead-grid">
+      {% for p in leadership %}
+      <article class="panel leader reveal {% if loop.index <=2 %}featured{% endif %}">
+        <small>{{ p.role }}</small>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="divisions">
+    <div class="section-head reveal">
+      <div>
+        <span>03 • DIVISIONS</span>
+        <h2>Empat divisi,<br><em>satu kolaborasi.</em></h2>
+      </div>
+      <p>Setiap divisi memiliki fokus kerja yang berbeda, tetapi seluruhnya bergerak dalam satu sistem organisasi untuk mendukung pelayanan mahasiswa, regenerasi, komunikasi, dan pengembangan kompetensi.</p>
+    </div>
+
+    <div class="division-list">
+      {% for d in divisions %}
+      <article class="division panel reveal">
+        <div class="division-left">
+          <img src="{{ url_for('static',filename='img/logo-imsa.png') }}" alt="Logo IMSA">
+          <small>DIVISI</small>
+          <h3>{{ d.name }}</h3>
+          <p>{{ d.summary }}</p>
+
+          <div class="chips">
+            {% for o in d.outputs %}<span>{{ o }}</span>{% endfor %}
+          </div>
+          <p class="principle"><b>Prinsip kerja:</b> {{ d.principle }}</p>
+        </div>
+
+        <div class="division-right">
+          <div class="coord">
+            <small>Koordinator Divisi</small>
+            <strong>{{ d.coordinator }}</strong>
+          </div>
+          <div class="members">
+            {% for m in d.members %}<span>{{ m.name }}</span>{% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section" id="activities">
+    <div class="section-head reveal">
+      <div>
+        <span>04 • ACTIVITY GALLERY</span>
+        <h2>Jejak kegiatan<br><em>dan kontribusi.</em></h2>
+      </div>
+      <p>Dokumentasi menjadi rekam jejak perjalanan IMSA—menampilkan aktivitas, kolaborasi, pengalaman anggota, dan kontribusi organisasi dalam setiap agenda yang dilaksanakan.</p>
+    </div>
+
+    {% if activities %}
+    <div class="gallery">
+      {% for a in activities %}
+      <article class="activity panel reveal">
+        <div class="cover {% if a.photos %}has{% endif %}">
+          {% if a.photos %}
+          <img src="{{ upload_url(a.photos[0].filename) }}" alt="{{ a.title }}">
+          {% else %}
+          <div class="empty-photo"><span>＋</span><b>Dokumentasi akan ditampilkan di sini</b></div>
+          {% endif %}
+        </div>
+        <div class="activity-body">
+          <div class="meta"><span>{{ a.division }}</span><time>{{ a.date or 'Tanggal belum dicantumkan' }}</time></div>
+          <h3>{{ a.title }}</h3>
+          <p>{{ a.description }}</p>
+          {% if a.photos|length >1 %}
+          <div class="thumbs">
+            {% for photo in a.photos[1:5] %}
+            <button class="lightbox-trigger" data-src="{{ upload_url(photo.filename) }}" data-title="{{ a.title }}">
+              <img src="{{ upload_url(photo.filename) }}" alt="{{ a.title }}">
+            </button>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="panel empty-state">Dokumentasi kegiatan akan tampil pada bagian ini setelah ditambahkan.</div>
+    {% endif %}
+  </section>
+</main>
+
+<footer>
+  <span>{{ settings.footer_text }}</span>
+  <span>Informatics Management Students Association • {{ settings.period }}</span>
+</footer>
+
+<div class="modal" id="androidModal">
+  <div class="android-card panel">
+    <button class="modal-close">×</button>
+
+    <div class="phone-visual">
+      <div class="phone">
+        <img src="{{ url_for('static',filename='img/logo-imsa.png') }}" alt="Logo IMSA">
+        <b>IMSA Mobile</b>
+        <small>Akses informasi organisasi dalam tampilan yang responsif di Android.</small>
+      </div>
+      <div class="qr"><img src="{{ url_for('qr_png') }}?t={{ settings.period }}" alt="QR IMSA"></div>
+    </div>
+
+    <div class="android-copy">
+      <span>ANDROID / QR</span>
+      <h2>IMSA dalam satu pindai.</h2>
+      <p>Scan QR untuk membuka dashboard IMSA melalui perangkat Android. Saat website telah menggunakan alamat publik, halaman dapat diakses melalui koneksi internet dari lokasi mana pun.</p>
+      <div class="urlbox">
+        <code id="mobileUrl">{{ public_base_url() }}/?device=android</code>
+        <button id="copyUrl">Salin</button>
+      </div>
+      <p class="public-status" id="publicStatus">Memeriksa ketersediaan akses publik…</p>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox"><button>×</button><img><p></p></div>
+{% endblock %}

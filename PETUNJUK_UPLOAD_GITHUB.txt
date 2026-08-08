@@ -1,0 +1,27 @@
+IMSA — VERSI SIAP GITHUB PAGES
+================================
+
+URL target: https://imsa2026-2027.github.io/
+
+CARA UPLOAD
+1. Buka repository GitHub: IMSA2026-2027.github.io
+2. Hapus/replace file lama jika perlu.
+3. Upload ISI folder ini ke ROOT repository.
+   PENTING: index.html harus terlihat langsung di root repository, jangan dimasukkan lagi ke folder tambahan.
+4. Commit changes.
+5. Buka Settings > Pages.
+6. Source: Deploy from a branch.
+7. Branch: main, Folder: / (root), lalu Save.
+8. Tunggu proses deployment selesai, lalu buka https://imsa2026-2027.github.io/
+
+FILE UTAMA
+- index.html            : Dashboard publik
+- presentation.html     : Mode presentasi
+- admin.html            : Penjelasan admin pada GitHub Pages
+- static/               : CSS, JavaScript, logo, QR
+- uploads/              : Foto kegiatan
+- .nojekyll             : Mencegah pemrosesan Jekyll yang tidak diperlukan
+- flask_source_backup/  : Source Flask asli sebagai cadangan
+
+CATATAN ADMIN
+GitHub Pages hanya hosting statis. Dashboard dan presentasi berjalan, tetapi login admin Flask, SQLite, upload/edit server-side tidak dapat berjalan di GitHub Pages. Source Flask asli tetap disertakan di flask_source_backup.
